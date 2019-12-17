@@ -1,0 +1,13 @@
+function s = signalx(t)
+s = arrayfun(@(signal(t)),t);
+end
+
+function x = signal(t)
+if(t>=-3 && t<=-1)
+    x = 2*exp(t+2);
+elseif(t>=-1 && t<= 4)
+    x = 2*exp(-t)*cos(2*pi*t);
+else
+    x = 0;
+end
+end
